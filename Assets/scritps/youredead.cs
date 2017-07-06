@@ -1,22 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class BOSS : MonoBehaviour
+public class youredead : MonoBehaviour
 {
-	public static int bossHP = 20;
+
 	// Use this for initialization
 	void Start ()
 	{
-		//bossHP = 7;
+
 	}
 
 	// Update is called once per frame
 	void Update ()
 	{
-		if (bossHP == 0) {
-			Destroy (gameObject); 
-		}
-		Debug.Log (bossHP);
+
+	}
+
+	public void LoadLevel ()
+	{
+		SceneManager.LoadScene ("startMenu");
 	}
 }

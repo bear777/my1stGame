@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class fakewall : MonoBehaviour { 
-	public static int fakeHP = 1;
+	public static int fakeHP = 2;
 	// Use this for initialization
 	void Start () {
 		//fakeHP = 7;

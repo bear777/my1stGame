@@ -7,9 +7,11 @@ public class raycast : MonoBehaviour
 
 	// Use this for initialization
 	Camera thisCamera;
-
+	public AudioClip gunshotSound;
+	public AudioSource source;
 	void Start ()
 	{
+		source = GetComponent <AudioSource> ();
 		thisCamera = this.GetComponent<Camera> ();
 		if (thisCamera == null)
 			this.gameObject.SetActive (false);
@@ -32,6 +34,7 @@ public class raycast : MonoBehaviour
 			// ...draw a green ray extending the distance of the collision
 			Debug.DrawRay (ray.origin, ray.direction * hit.distance, Color.green);
 			if (Input.GetKeyDown (KeyCode.Mouse0)) {
+				source.PlayOneShot (gunshotSound);
 				if (hit.transform.gameObject.tag == "bad") {
 					hit.collider.gameObject.GetComponent<BADIE> ().enemyHP -= 1;
 					Debug.Log ("hit");

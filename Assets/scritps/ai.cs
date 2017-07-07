@@ -6,7 +6,7 @@ public class ai : MonoBehaviour {
 	public float walkingdistance = 10.0f;
 	public Transform player;
 	public float smoothtime = 10.0f;
-		private Vector3 smoothvelocity = Vector3.zero * 25.0f;
+		private Vector3 smoothvelocity = Vector3.zero * 100.0f;
 	// Use this for initialization
 	void Start () {
 		
